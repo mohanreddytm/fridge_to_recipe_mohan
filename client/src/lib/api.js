@@ -6,8 +6,7 @@ export async function requestRecipe(inputs, signal) {
   let responseText;
 
   try {
-    response = await fetch("/api/generate", {
-      method: "POST",
+    response = await fetch("https://fridge-to-recipe-mohan.onrender.com/api/generate", {      method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(inputs),
       signal,
